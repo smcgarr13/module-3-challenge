@@ -29,7 +29,7 @@ https://stackoverflow.com/questions/69851109/
 Please refer to the LICENSE in the repo.
 
 Mock-up Reference:
-<a href=./assets/images/password_generator_screenshot.png>
+https://github.com/smcgarr13/module-3-challenge/blob/main/assets/images/password_generator_screenshot.png
 
 Deployed Website:
 https://smcgarr13.github.io/module-3-challenge/
