@@ -37,7 +37,8 @@ function generatePassword() {
   const lengthNum = parseInt(length);
   if (lengthNum === null || lengthNum < 8 || lengthNum > 128) {
     alert("password must be between 8-128 characters.  Please try again.")
-    return
+
+    return "Your Secure Password";
   };
 
   let lowercase = confirm("Would you like to include lowercase characters?");
@@ -72,7 +73,7 @@ function generatePassword() {
      // for alert, referenced: https://stackoverflow.com/questions/69851109/
      if (!special && !numbers && !uppercase && !lowercase)
      alert("At least one character type should be selected.  Please try again!");
-     return "your secure password"
+     return "Your Secure Password"
 }
 
 // Write password to the #password input

@@ -1,9 +1,6 @@
 # module-3-challenge
 This is our assignment for Module-3
 
-# module-3-challenge
-This is our assignment for Module-3
-
 ## Description
 
 This code was created to provide a random password generator that provides a strong password for better security.
@@ -36,4 +33,5 @@ Mock-up Reference:
 
 Deployed Website:
 https://smcgarr13.github.io/module-3-challenge/
+
 
