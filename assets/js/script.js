@@ -37,6 +37,7 @@ function generatePassword() {
   const lengthNum = parseInt(length);
   if (lengthNum === null || lengthNum < 8 || lengthNum > 128) {
     alert("password must be between 8-128 characters.  Please try again.")
+
     return "Your Secure Password";
   };
 
