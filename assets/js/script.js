@@ -1,7 +1,8 @@
+
 // Assignment code here
 
 // randomfunc https://net-comber.com/charset.html
-// referenced https://www.google.com/search?q=how+to+write+javascript+for+password+generator&sxsrf=ALiCzsY5OERP31qboygu5Qucw3SLU6dUmQ%3A1671247849297&ei=6TedY5zdEe2pptQPiLStgAQ&ved=0ahUKEwjc9Y2z2__7AhXtlIkEHQhaC0AQ4dUDCA8&uact=5&oq=how+to+write+javascript+for+password+generator&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzoKCAAQRxDWBBCwAzoHCCMQsAIQJ0oECEEYAEoECEYYAFDdBljPDWCAFWgBcAF4AIABWogBnwGSAQEymAEAoAEByAEIwAEB&sclient=gws-wiz-serp#fpstate=ive&vld=cid:4ccfc666,vid:duNmhKgtcsI
+// referenced https://youtu.be/duNmhKgtcsI
 function getRandomLower() {
   return String.fromCharCode (Math.floor(Math.random() * 26) + 97);
 }
@@ -29,65 +30,56 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   console.log("Button Works!!")
 
-var finalPassword = ""
+  var finalPassword = "";
 
-let length = prompt("How many characters between 8-128 would you like your password to be?");
+  let length = prompt("How many characters between 8-128 would you like your password to be?");
 
-if (length === null || length < 8 || length > 128) {
-return
-};
+  const lengthNum = parseInt(length);
+  if (lengthNum === null || lengthNum < 8 || lengthNum > 128) {
+    alert("password must be between 8-128 characters.  Please try again.")
+    return "Your Secure Password";
+  };
 
-let lowercase = confirm("Would you like to include lowercase characters?");
+  let lowercase = confirm("Would you like to include lowercase characters?");
 
-let uppercase = confirm("Would you like to include uppercase characters?");
+  let uppercase = confirm("Would you like to include uppercase characters?");
 
-let numbers = confirm("Would you like to include numbers?");
+  let numbers = confirm("Would you like to include numbers?");
 
-let special = confirm("Would you like to include special characters?");
+  let special = confirm("Would you like to include special characters?");
 
-for (let i = 0; i < length;) {
-if (lowercase) {
-  finalPassword += getRandomLower()
- i++ 
- if (i === length) {
-  return
- }
-}
+  for (let i = 0; i < lengthNum; i++) {
+    if (lowercase) {
+      finalPassword += getRandomLower()
+      if (finalPassword.length === lengthNum){return finalPassword}
+    }
 
-if (uppercase) {
-  finalPassword += getRandomUpper()
-  i++ 
-  if (i === length) {
-   return
+    if (uppercase) {
+      finalPassword += getRandomUpper()
+      if (finalPassword.length === lengthNum){return finalPassword}
+    }
+
+    if (numbers) {
+      finalPassword += getRandomNumber()
+      if (finalPassword.length === lengthNum){return finalPassword}
+    }
+
+    if (special) {
+      finalPassword += getRandomSpecial()
+      if (finalPassword.length === lengthNum){return finalPassword}
+    }
   }
-}
-
-if (numbers) {
-  finalPassword += getRandomNumber()
-  i++ 
-  if (i === length) {
-   return
-  }
-}
-
-if (special) {
-  finalPassword += getRandomSpecial()
-  i++ 
-  if (i === length) {
-   return
-  }
-}
-}
-  return finalPassword;
+     // for alert, referenced: https://stackoverflow.com/questions/69851109/
+     if (!special && !numbers && !uppercase && !lowercase)
+     alert("At least one character type should be selected.  Please try again!");
+     return "Your Secure Password"
 }
 
 // Write password to the #password input
 function writePassword() {
-var password = generatePassword();
-var passwordText = document.querySelector("#password");
-
-passwordText.value = password;
-
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
