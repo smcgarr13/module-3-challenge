@@ -31,10 +31,10 @@ Please refer to the LICENSE in the repo.
 Mock-up Reference:
 <a href=./assets/images/password_generator_screenshot.png>
 https://github.com/smcgarr13/m![password_generator_screenshot](https://user-images.githubusercontent.com/117788958/209277114-cb99e6de-bda5-466c-8df9-8b93244bc055.png)
-odule-3-challenge/blob/main/assets/images/password_generator_screenshot.png
-![Uploading password_generator_screenshot.png…]()
+
 
 Deployed Website:
 https://smcgarr13.github.io/module-3-challenge/
 
+![password_generator_screenshot](https://user-images.githubusercontent.com/117788958/209277436-f83e5b45-0793-4334-8e9c-4346df35e61d.png)
 
